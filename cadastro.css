@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face{
+  font-family: "minhafonte";
+  src: url("fontes/anteroly.ttf");
+}
+
+@font-face{
+  font-family: "minhafonte2";
+  src: url("fontes/Jaldi/Jaldi-Regular.ttf");
+}
+
+body {
+  font-family:'Roboto', sans-serif;
+
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Centraliza a logo e os links */
+  align-items: center;
+  padding: 10px 40px;
+  position: relative; /* Para posicionar os ícones à direita */
+}
+
+.logo {
+  text-align: center;
+  width: 100%; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+}
+
+
+.icons {
+  position: absolute;
+  right: 40px; /* Posiciona os ícones à direita */
+  display: flex;
+  align-items: center;
+}
+
+.icons a {
+  margin-left: 20px;
+  font-size: 20px;
+  color: #000;
+}
+/* Linha separadora */
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+/* Seção inferior com nav-links e barra de pesquisa */
+.bottom-section {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  position: relative; /* Permite o uso de posicionamento absoluto */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  left: 50%; /* Posiciona no centro horizontal */
+  transform: translateX(-50%); /* Garante que a centralização seja precisa */
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px; /* Aumenta o tamanho dos links de navegação */
+  font-weight: 500; /* Torna os links um pouco mais grossos */
+  padding: 5px 0;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #000; /* Efeito de hover com linha */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-left: auto; /* Move a barra de pesquisa para a direita */
+}
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+.search-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button i {
+  color: #000;
+  font-size: 16px;
+}
+
+
+/**/
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Defina a altura que quiser */
+  overflow: hidden;
+  margin-bottom: 40px; /* Espaço abaixo da seção */
+}
+
+/* Estilos para a seção do título */
+.section-header {
+  margin-bottom: 20px; /* Espaço entre o título e o vídeo */
+}
+
+.section-title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Arial", sans-serif; /* Ajuste a fonte como desejar */
+    color: #000; /* Cor preta para o título */
+    padding-left: 40px; /* Alinha o título à esquerda */
+    padding-top: 2px;
+    position: relative;
+    margin-top: 5px; /* Aumente o espaço superior conforme necessário */
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 150px; /* Ajusta a linha a partir do texto */
+    top: 100%;
+    width: calc(100% - 150px); /* Linha que vai até o fim da tela */
+    height: 1px;
+    background-color: #000; /* Cor preta para a linha */
+    transform: translateY(-50%);
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Faz com que o vídeo preencha o container */
+}
+
+.overlay {
+  position: relative;
+  z-index: 2; /* Coloca o conteúdo sobre o vídeo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  text-align: center;
+  background-color: rgba(63, 63, 63, 0.5); /* Sombra escura sobre o vídeo */
+  border-radius: 10px;
+  color: #fff; /* Texto branco */
+  padding: 20px ;
+}
+
+.overlay h2 {
+  font-size: 48px;
+  font-family: "Arial", sans-serif; /* Ajuste a fonte como desejar */
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/*forms*/
+
+/* Estilos do formulário */
+.cadastro {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+}
+
+input[type="date"] {
+  color: #666;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: #001b50;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0046a1;
+}
+
+/* Alinhamento e espaçamento */
+.cadastro h1, .cadastro p {
+  margin: 0 auto 20px auto;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+button {
+  width: 100%;
+}
+
+/* Footer */ 
+
+.footer {
+  background-color: #030A49;
+  ;
+  padding: 40px 0;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 23%; /* Distribui igualmente em 4 colunas */
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-column p, .footer-column ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li img {
+  width: 20px; /* Tamanho dos ícones de redes sociais */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #f0f0f0; /* Cor ao passar o mouse sobre os links */
+}
+
+.payment-methods img {
+  width: 40px; /* Ajuste do tamanho dos ícones de pagamento */
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #ffba40; /* Cor amarela do texto "belchior" */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}

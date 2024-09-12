@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face{
+  font-family: "minhafonte";
+  src: url("fontes/anteroly.ttf");
+}
+
+@font-face{
+  font-family: "minhafonte2";
+  src: url("fontes/Jaldi/Jaldi-Regular.ttf");
+}
+
+body {
+  font-family:'Roboto', sans-serif;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Centraliza a logo e os links */
+  align-items: center;
+  padding: 10px 40px;
+  position: relative; /* Para posicionar os ícones à direita */
+}
+
+.logo {
+  text-align: center;
+  width: 100%; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+}
+
+
+.icons {
+  position: absolute;
+  right: 40px; /* Posiciona os ícones à direita */
+  display: flex;
+  align-items: center;
+}
+
+.icons a {
+  margin-left: 20px;
+  font-size: 20px;
+  color: #000;
+}
+
+/* Linha separadora */
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+/* Seção inferior com nav-links e barra de pesquisa */
+.bottom-section {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  position: relative; /* Permite o uso de posicionamento absoluto */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  left: 50%; /* Posiciona no centro horizontal */
+  transform: translateX(-50%); /* Garante que a centralização seja precisa */
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px; /* Aumenta o tamanho dos links de navegação */
+  font-weight: 500; /* Torna os links um pouco mais grossos */
+  padding: 5px 0;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #000; /* Efeito de hover com linha */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-left: auto; /* Move a barra de pesquisa para a direita */
+}
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+.search-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button i {
+  color: #000;
+  font-size: 16px;
+}
+  
+  /* Seção de Produtos */
+  .products-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .products-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .products-section p {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .products-section .sort {
+    margin-bottom: 40px;
+  }
+  
+  .products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .rounded-button {
+    border: 1px solid #000; /* Cor e espessura da borda */
+    border-radius: 30px; /* Deixa as bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: transparent; /* Cor de fundo transparente */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de mão ao passar por cima */
+    outline: none; /* Remove o contorno ao clicar */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+  }
+  
+  .rounded-button:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Adiciona um leve fundo ao passar o mouse */
+  }
+  
+  /* Rodapé */
+  .footer {
+    background-color: #030A49;
+    ;
+    padding: 40px 0;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 23%; /* Distribui igualmente em 4 colunas */
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li img {
+    width: 20px; /* Tamanho dos ícones de redes sociais */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #f0f0f0; /* Cor ao passar o mouse sobre os links */
+}
+
+.payment-methods img {
+    width: 40px; /* Ajuste do tamanho dos ícones de pagamento */
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #ffba40; /* Cor amarela do texto "belchior" */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}

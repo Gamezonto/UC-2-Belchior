@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "minhafonte";
+    src: url("fontes/anteroly.ttf");
+}
+
+@font-face{
+    font-family: "minhafonte2";
+    src: url("fontes/Jaldi/Jaldi-Regular.ttf");
+}
+
+body {
+    font-family:'Roboto', sans-serif;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centraliza a logo e os links */
+    align-items: center;
+    padding: 10px 40px;
+    position: relative; /* Para posicionar os ícones à direita */
+}
+
+.logo {
+    text-align: center;
+    width: 100%; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+
+.icons {
+    position: absolute;
+    right: 40px; /* Posiciona os ícones à direita */
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #000;
+}
+
+/* Linha separadora */
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+/* Seção inferior com nav-links e barra de pesquisa */
+.bottom-section {
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    position: relative; /* Permite o uso de posicionamento absoluto */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%; /* Posiciona no centro horizontal */
+    transform: translateX(-50%); /* Garante que a centralização seja precisa */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px; /* Aumenta o tamanho dos links de navegação */
+    font-weight: 500; /* Torna os links um pouco mais grossos */
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #000; /* Efeito de hover com linha */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-left: auto; /* Move a barra de pesquisa para a direita */
+}
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+}
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button i {
+    color: #000;
+    font-size: 16px;
+}
+/* Conteúdo principal */
+
+.sobre-nos {
+    width: 58%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sobre-nos h2 {
+    font-size: 48px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #000;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sobre-nos p {
+    font-size: 27px;
+    line-height: 1.5;
+    margin: 30px 0;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.div-1, .div-2, .div-3 {
+    margin: 50px 0;
+}
+
+.div-1 h3, .div-2 strong, .div-3 h3 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.sustentabilidade {
+    border-bottom: 3px solid #88B04B;
+    display: inline-block;
+}
+
+.inclusao {
+    border-bottom: 3px solid #cd7f32;
+    display: inline-block;
+}
+
+.incentivo {
+    border-bottom: 3px solid #19294d;
+    display: inline-block;
+}
+
+.team-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.team-container h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
+    grid-gap: 20px; /* Espaço entre os itens */
+    padding: 20px;
+}
+
+.team-member {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%; /* Ajusta a largura da imagem para ocupar 100% do espaço do contêiner */
+    height: 400px; /* Define uma altura fixa para todas as imagens */
+    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner sem distorção */
+    border-radius: 8px;
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #030A49;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 23%;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-column ul li img {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-column a:hover {
+    color: #f0f0f0;
+}
+
+.payment-methods img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    color: #ffba40;
+}
+
+.footer-bottom img {
+    width: 200px;
+}

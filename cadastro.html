@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belchior</title>
+    <link rel="stylesheet" href="cadastro.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Link para Font Awesome para os ícones -->
+    <script
+      src="https://kit.fontawesome.com/8adf5fd04c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="image/Logo.jpeg" alt="Logo Belchior" />
+        </div>
+
+        <div class="icons">
+          <a href="#"><i class="fas fa-user"></i></a>
+          <a href="#"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+      </nav>
+      <div class="separator"></div>
+      <!-- Linha abaixo da logo -->
+      <div class="bottom-section">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="uc2.html">Feminino</a></li>
+          <li><a href="uc2_infantil.html">Infantil</a></li>
+          <li><a href="uc2_homens.html">Masculino</a></li>
+          <li><a href="cadastro.html">Trabalhe Conosco</a></li>
+        </ul>
+        <div class="search-container">
+          <input type="text" placeholder="Pesquisar..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="section-header">
+        <h3 class="section-title">Trabalhe Conosco</h3>
+    </div>
+   
+
+    <!--corpo-->
+    <body>
+
+        <section class="video-section">
+            <div class="section-header">
+                <h3 class="section-title">Trabalhe Conosco</h3>
+            </div>
+        
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="video/video3.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos HTML5.
+                </video>
+            </div>
+        
+            <div class="overlay">
+                <h2>Costureiros de Belchior</h2>
+                <p>Costureiros de Belchior é um projeto com o objetivo de valorizar o trabalho artesanal dos costureiros e costureiras locais. Através dessa iniciativa, oferecemos a esses profissionais a oportunidade de transformar peças de roupa defeituosas ou sem uso em novas criações únicas, promovendo a moda circular.</p>
+            </div>
+        </section>
+
+    </body>
+
+    <main>
+        <section class="cadastro">
+          <h1>Cadastro</h1>
+          <p>
+            Se você ama moda e deseja ser um costureiro de Belchior e quer
+            contribuir no nosso crescimento, #VemPraBelchior!
+          </p>
+          <form action="/submit" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required />
+  
+            <label for="data-nascimento">Data de nascimento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento" required />
+  
+            <label for="genero">Gênero:</label>
+            <input type="text" id="genero" name="genero" placeholder="Digite o seu gênero" required />
+  
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" placeholder="Digite o seu CPF" required />
+  
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Digite o seu endereço" required />
+  
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="Digite o seu telefone" required />
+  
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required />
+  
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </main>
+
+
+    <!--Footer-->
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>Endereço</h3>
+            <p>R. Tito, 54 - Vila Romana, São Paulo - SP, 05051-000</p>
+            <h4>Formas de Pagamento</h4>
+            <div class="payment-methods">
+              <img src="imagens/image 18.png" alt="Visa" />
+              <img src="imagens/image 19.png" alt="MasterCard" />
+              <img src="imagens/image 21.png" alt="Elo" />
+              <img src="imagens/image 20.png    " alt="Pix" />
+              <img src="imagens/image.png" alt="Boleto" />
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Redes Sociais</h3>
+            <ul>
+              <li><img src="imagens/whatsapp (3) 1.png" alt="WhatsApp" /> WhatsApp</li>
+              <li><img src="imagens/facebook (4) 1.png" alt="Facebook" /> Facebook</li>
+              <li><img src="imagens/instagram 1.png" alt="Instagram" /> Instagram</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>SAC</h3>
+            <ul>
+              <li><a href="#">Informações Sobre Pedidos</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+              <li><a href="#">Perguntas Frequentes</a></li>
+              <li><a href="#">Quer Vender no nosso site?</a></li>
+              <li><a href="#">Como Funciona a Sacolinha</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Categorias</h3>
+            <ul>
+              <li><a href="#">Roupas</a></li>
+              <li><a href="#">Acessórios</a></li>
+              <li><a href="#">Bolsas & Mochilas</a></li>
+              <li><a href="#">Calçados</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <img src="image/belchior_amarela.png" alt="Logo Belchior" />
+        </div>
+      </footer>
+
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>s
+    </body>
+  </html>

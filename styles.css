@@ -1,0 +1,616 @@
+/* Reset básico para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração das fontes */
+@font-face {
+    font-family: "minhafonte";
+    src: url("fontes/anteroly.ttf");
+}
+
+@font-face {
+    font-family: "minhafonte2";
+    src: url("fontes/Jaldi/Jaldi-Regular.ttf");
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo do header */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilo da navbar */
+.navbar {
+    display: flex;
+    justify-content: center; /* Centraliza a logo e os links */
+    align-items: center;
+    padding: 10px 40px;
+    position: relative; /* Para posicionar os ícones à direita */
+}
+
+.logo {
+    text-align: center;
+    width: 100%; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.icons {
+    position: absolute;
+    right: 40px; /* Posiciona os ícones à direita */
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 20px;
+    font-size: 20px;
+    color: #000;
+}
+
+/* Linha separadora */
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+/* Seção inferior com nav-links e barra de pesquisa */
+.bottom-section {
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    position: relative; /* Permite o uso de posicionamento absoluto */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%; /* Posiciona no centro horizontal */
+    transform: translateX(-50%); /* Garante que a centralização seja precisa */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px; /* Aumenta o tamanho dos links de navegação */
+    font-weight: 500; /* Torna os links um pouco mais grossos */
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #000; /* Efeito de hover com linha */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-left: auto; /* Move a barra de pesquisa para a direita */
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button i {
+    color: #000;
+    font-size: 16px;
+}
+
+/* Estilo da seção hero com imagem e texto */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    flex-wrap: wrap; /* Adicionado para melhor responsividade */
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 500px;
+    margin-right: 20px;
+}
+
+.hero-image-container {
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 50%;
+    width: 400px;
+    height: auto;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    background-color: #001f54;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #003078;
+}
+
+/* Estilo dos indicadores do carrossel */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #001f54;
+}
+
+.dot:hover {
+    background-color: #003078;
+}
+
+/* Estilo da seção de boas-vindas */
+.welcome-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.welcome-section h2 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.welcome-section .underline {
+    width: 50px;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 auto 20px auto;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilo do carrossel */
+.carousel-container {
+    width: 80%;
+    max-width: 1000px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Centraliza o carrossel */
+    position: relative; /* Adiciona posição relativa para alinhamento interno */
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+    align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
+.carousel-item {
+    min-width: 100%; /* Para cada item ocupar o total do espaço visível */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura total */
+}
+
+.carousel-item img {
+    width: 300px; /* Largura menor para ser retangular */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Para ajustar o conteúdo da imagem dentro do tamanho */
+    border-radius: 10px;
+    display: block; /* Remove o espaçamento extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+/* Estilo da seção de promoção */
+.promo-section {
+    width: 100vw; /* Usa toda a largura da janela de visualização */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9; /* Cor de fundo, se necessário */
+    padding: 0; /* Remove o padding para que a imagem vá de ponta a ponta */
+    margin: 0; /* Remove as margens */
+}
+
+.promo-section img {
+    width: 100vw; /* Faz a imagem ocupar toda a largura da viewport */
+    height: auto;
+    display: block;
+    object-fit: cover; /* Mantém a proporção da imagem e preenche a largura */
+}
+
+/* Estilo das categorias */
+.categories-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.categories-section h2 {
+    font-size: 24px;
+    color: #001f54;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Aumenta o espaçamento entre as seções */
+}
+
+.category-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 250px; /* Aumenta a largura dos cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card img {
+    width: 100%;
+    height: 300px; /* Aumenta a altura das imagens */
+    object-fit: cover;
+}
+
+.category-card p {
+    font-size: 20px; /* Aumenta o tamanho do texto */
+    color: #000;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+/* Efeito ao passar o mouse */
+.category-card:hover {
+    transform: scale(1.05); /* Aumenta o card em 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilização da seção "style-moments" */
+.full-image-section {
+    background-image: url('image/Momentos.jpeg'); /* Insira o caminho correto da imagem */
+    background-size: cover;
+    background-position: center;
+    height: 700px; /* Aumente ou ajuste para ser mais responsivo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.full-image-content {
+    text-align: center;
+}
+
+.content-container {
+    background-color: rgba(0, 0, 51, 0.7); /* Fundo escuro translúcido */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* H2 dentro do conteúdo */
+.full-image-content h2 {
+    font-size: 36px;
+    color: #fff;
+    background-color: #001f54; /* Cor sólida de fundo */
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* H2 dentro da seção completa */
+.full-image-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do botão */
+.full-image-section button {
+    background-color: #001f54;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.full-image-section button:hover {
+    background-color: #003078;
+}
+
+/* Estilo da seção de projeto */
+.project-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+    height: 100vh; /* Para centralizar verticalmente na página */
+}
+
+.project-card {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 400px; /* Altura fixa do card */
+    background-image: url('image/Conheça o projeto.jpeg'); /* Define a imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra todo o card */
+    background-position: center; /* Centraliza a imagem no card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start; /* Posiciona o texto à esquerda */
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-content {
+    padding: 40px;
+    border-radius: 10px;
+    color: #000000; /* Texto branco para contraste */
+    max-width: 50%; /* Limita a largura do conteúdo */
+}
+
+.project-content h2 {
+    font-size: 20px;
+    color: #000000; /* Cor mais clara */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.project-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000; /* Texto branco */
+    text-decoration: underline; /* Sublinhado */
+    text-transform: uppercase;
+}
+
+.project-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #001f54;
+    color: #ffffff;
+    padding: 8px 16px; /* Botão menor */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px; /* Diminuir tamanho da fonte */
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #003078;
+}
+
+/* Estilo do footer */
+.footer {
+    background-color: #030A49;
+    padding: 40px 0;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 23%; /* Distribui igualmente em 4 colunas */
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li img {
+    width: 20px; /* Tamanho dos ícones de redes sociais */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #f0f0f0; /* Cor ao passar o mouse sobre os links */
+}
+
+.payment-methods img {
+    width: 40px; /* Ajuste do tamanho dos ícones de pagamento */
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #ffba40; /* Cor amarela do texto "belchior" */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo do botão do menu e do menu lateral */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 115px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu-btn .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    z-index: 100;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.close-btn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.side-menu.open {
+    transform: translateX(0);
+}
+
